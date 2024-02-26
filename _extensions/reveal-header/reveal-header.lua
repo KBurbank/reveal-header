@@ -70,6 +70,13 @@ local function grid_no_htext()
 })
 end
 
+local function grid_subtitle()
+  quarto.doc.add_html_dependency({
+  name = "grid-subtitle",
+  version = "1.0.0",
+  stylesheets = {"resources/css/grid_subtitle.css","resources/css/subtitle.css"}
+})
+end
 
 if quarto.doc.is_format('revealjs') then
   -- Ensuring the dependencies got loaded before proceeding
@@ -83,10 +90,11 @@ if quarto.doc.is_format('revealjs') then
     end
     if meta['sub-title'] then
         sub_title()
+        grid_subtitle()
     end
-    if meta['header'] then
+    if meta['header'] and not meta['sub-title'] then
       grid_htext()
-    else
+    elseif not meta['sub-title'] then
       grid_no_htext()
     end
     local header_text = meta['header'] and str(meta['header']) or " "
@@ -112,7 +120,11 @@ if quarto.doc.is_format('revealjs') then
     if footer_logo_link ~= "" then
       header_img.attributes['footer-logo-link'] = footer_logo_link
     end
-    
+   -- if meta['sub_title'] then
+    local header_subsection = pandoc.Div(pandoc.Para(" "), {class = "sub-title", id="reveal-subheader"})
+    -- else
+      
+   --b end
     local header_section = pandoc.Div(pandoc.Para(" "), {class = "sc-title"})
     local header_sbsection = pandoc.Div(pandoc.Para(" "), {class = "sb-title"})
     local header_para = pandoc.Div(pandoc.Para(header_text), header_para_class)
@@ -132,7 +144,8 @@ if quarto.doc.is_format('revealjs') then
         header_img,
         header_section,
         header_para,
-        header_sbsection
+        header_sbsection,
+        header_subsection
       }, 
       {class = 'reveal-header'})
     table.insert(blocks, div)

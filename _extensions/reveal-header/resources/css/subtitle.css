@@ -1,0 +1,16 @@
+
+.slide.level2.present h2 {display: none}
+
+.reveal-header .sub-title p {
+  font-size: max(20px, 3.45vw);
+/*  filter: brightness(0.85); */
+  color: white!important;
+vertical-align: center;
+}
+
+.reveal-header {
+  background-color: rgb(176, 189, 213);
+  margin: 0px !important;
+
+}
+

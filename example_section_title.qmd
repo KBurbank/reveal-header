@@ -8,8 +8,8 @@ format:
   revealjs:
     slide-number: false
     sub-title: true
-    logo: images/quarto.png
-    footer-logo-link: "https://quarto.org"
+
+    
 filters: 
   - reveal-header
 slide-level: 2
@@ -49,15 +49,24 @@ Even if there is text here...
 - More ...
 
 
-# A different H1 Section {background="#43464B"}
+# A different H1 Section.{background="#43464B"}
 
-## A different H2 Subsection {background="#43464B"}
+
+## A different H2 Subsection and we can make it super super super super long {background="#43464B"}
 
 We can put some text in here...
 
+##
 
+What about another slide without a new title?
 
-## This H2 subsection {background="#43464B"}
+## Now a new title
+
+Here is a new slide.
+
+## Now another new title
+
+## Now a third new title
 
 ### TODO {background="#43464B"}
 

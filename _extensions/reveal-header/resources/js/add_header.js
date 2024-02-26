@@ -31,7 +31,16 @@ function header() {
     link.appendChild(logo_cloned);
     logo.replaceWith(link);
   };
-    
+ 
+  
+  function fixHeight() {
+  
+    var clientHeight = document.querySelector('div.reveal-header').clientHeight;
+    let dyn_slides = document.querySelector('div.slides');
+    dyn_slides.style.marginTop = clientHeight + 'px';
+  }
+  
+
   // add the class inverse-header for slide with has-dark-background class
   // otherwise remove it.
   function add_class(has_dark, header_paras) {
@@ -54,6 +63,15 @@ function header() {
     } else {
       cheader.innerHTML = ctext;
     };
+
+    // kludge to wait until the page has recalculated the height in order to set it right
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        fixHeight();
+    	});
+    });
+
+
   };
   
   function hide_from_title_slide(element) {
@@ -76,6 +94,9 @@ function header() {
   
   
   if (Reveal.isReady()) {
+    Reveal.initialize({
+      disableLayout: false
+    });
     
     add_header();
     
@@ -126,13 +147,18 @@ function header() {
     // change the header if currently loaded slide has the header div defined
     // which won't be captured by slidechanged event unless we change slides.
     let dynamic_header = Reveal.getCurrentSlide().querySelector('div.header p');
+  
     change_header(dynamic_header, header_text, header_inner_html);
     
     Reveal.on( 'slidechanged', event => {
       let dyn_header = event.currentSlide.querySelector('div.header p');
       change_header(dyn_header, header_text, header_inner_html);
-    });
+   
+      // set the margin-top property of the first div with class "styles" to equal clientHeight
     
+    });
+
+   
     /************** header text in title slide if title or ***********************/
     /*************  subtitle is used as header text        ***********************/
     

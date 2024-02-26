@@ -32,6 +32,7 @@
 
 .reveal-header .sc-title p { float: left; margin-left: 0.5vw}
 .reveal-header .sb-title p { float: right; margin-right: 0.5vw}
+.reveal-header .sub-title p { float: left; margin-left: 2vw}
 .reveal-header.no-logo .sc-title p {margin-left: 6vw}
 
 
