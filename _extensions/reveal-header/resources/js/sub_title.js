@@ -75,10 +75,12 @@ function add_sub_title() {
                 // handling h2 section title (`.sb-title`)
                 var sbsection_text = event.currentSlide.getAttribute('data-sb-title') || " ";
                 if (event.currentSlide.matches('.title-slide.level1')) {
+                    header.style.display="none";
                     header.querySelector('.sub-title p').innerText = "";
                     //    } else if (event.currentSlide.matches('.title-slide.level2')) {
                     //      header.querySelector('.sb-title p').innerText = "";
                 } else {
+                    header.style.display="grid";
                     header.querySelector('.sub-title p').innerText = sbsection_text;
                 };
             };
