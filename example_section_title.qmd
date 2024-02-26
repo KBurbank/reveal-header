@@ -6,21 +6,24 @@ date: last-modified
 date-format: "DD MMM, YYYY"
 format: 
   revealjs:
-    slide-number: true
-    sc-sb-title: true
+    slide-number: false
+    sub-title: true
     logo: images/quarto.png
     footer-logo-link: "https://quarto.org"
 filters: 
   - reveal-header
-slide-level: 3
-number-sections: true
+slide-level: 2
+number-sections: false
 engine: knitr
 embed-resources: true
 ---
 
-# Section 
+# H1 section 
 
-## Subsection
+## H2 subsection
+
+Even if there is text here...
+
 
 ### TODO
 
@@ -32,12 +35,13 @@ embed-resources: true
 - Get freshed
 - Make the beds
 
-## Subsection
+## Another H2 sub
 
 ### TODO
 
 - Eat eggs
 - Drink coffee
+
 
 ### TODO
 
@@ -45,22 +49,15 @@ embed-resources: true
 - More ...
 
 
-# Section {background="#43464B"}
+# A different H1 Section {background="#43464B"}
 
-## Subsection {background="#43464B"}
+## A different H2 Subsection {background="#43464B"}
 
-### TODO {background="#43464B"}
-
-- Turn off alarm
-- Get out of bed
-
-### TODO {background="#43464B"}
-
-- Get freshed
-- Make the beds
+We can put some text in here...
 
 
-## Subsection {background="#43464B"}
+
+## This H2 subsection {background="#43464B"}
 
 ### TODO {background="#43464B"}
 

@@ -44,6 +44,16 @@ local function sc_sb_title()
   })
 end
 
+local function sub_title()
+  quarto.doc.add_html_dependency({
+    name = "sub-title",
+    version = "1.0.0",
+    scripts = {
+        { path = "resources/js/sub_title.js", attribs = {defer = "true"}}
+      }
+  })
+end
+
 local function grid_htext()
   quarto.doc.add_html_dependency({
   name = "grid-htext",
@@ -70,6 +80,9 @@ if quarto.doc.is_format('revealjs') then
     local meta = doc.meta
     if meta['sc-sb-title'] then
       sc_sb_title()
+    end
+    if meta['sub-title'] then
+        sub_title()
     end
     if meta['header'] then
       grid_htext()
