@@ -60,6 +60,7 @@ function add_sub_title() {
             if (sp != null) {
                 let header = document.querySelector("div.reveal-header");
 
+                /*
                 // handling h1 section title (`.sc-title`)
                 var section_text = event.currentSlide.getAttribute('data-sc-title') || " ";
                 if (event.currentSlide.matches('.title-slide.level1')) {
@@ -69,6 +70,7 @@ function add_sub_title() {
                 } else {
                     header.querySelector('.sc-title p').innerText = section_text;
                 };
+                */
 
                 // handling h2 section title (`.sb-title`)
                 var sbsection_text = event.currentSlide.getAttribute('data-sb-title') || " ";

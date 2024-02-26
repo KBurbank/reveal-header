@@ -6,7 +6,6 @@ date: last-modified
 date-format: "DD MMM, YYYY"
 format: 
   revealjs:
-    slide-number: false
     sub-title: true
 
     
