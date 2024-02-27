@@ -21,5 +21,6 @@ text-align: right;
   background-color: rgb(176, 189, 213);
   margin: 0px !important;
 position: flex;
+width: 100%;
 }
 

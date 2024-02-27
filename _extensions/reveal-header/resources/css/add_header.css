@@ -12,7 +12,7 @@
   top: 0;
   margin: 3.2px 0px 2px 0px;
   width: 100%;
-  position: fixed;
+  position: flex;
   z-index: 5;
   /*font-family: var(--header-font-family);*/
 }
