@@ -19,7 +19,7 @@ embed-resources: true
 
 # H1 section 
 
-## H2 subsection
+## $$E=mc^2$$
 
 Even if there is text here...
 
@@ -55,7 +55,7 @@ Even if there is text here...
 
 We can put some text in here...
 
-##
+---
 
 What about another slide without a new title?
 
