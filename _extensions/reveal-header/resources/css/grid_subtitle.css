@@ -26,8 +26,8 @@ div.reveal-header {
 }
 
 div.reveal-header.no-logo {
-  grid-template-columns: 1fr .25fr;
-  grid-template-areas: "sc sb";
+  grid-template-columns: 1fr;
+  grid-template-areas: "sc";
   margin-top: 1.5vh;
 }
 
@@ -41,8 +41,8 @@ div.reveal-header.no-logo {
   }
 
   div.reveal-header.no-logo {
-    grid-template-columns: 1fr 0.1fr 1fr 0.25fr;
-    grid-template-areas: "sc ht sb sn";
+    grid-template-columns: 1fr;
+    grid-template-areas: "sc";
   }
   
   .reveal-header .sc-title p { margin-left: 1vw; }
