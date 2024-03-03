@@ -7,10 +7,14 @@ date-format: "DD MMM, YYYY"
 format: 
   revealjs:
     sub-title: true
+    smaller: true
+    incremental: true
+    theme: [sky]
+    number-sections: false
+    number-depth: 2
 
     
-filters: 
-  - reveal-header
+
 slide-level: 2
 number-sections: false
 engine: knitr
@@ -22,6 +26,13 @@ embed-resources: true
 ## $$E=mc^2$$
 
 Even if there is text here...
+
+## An example
+
+1. Something
+2. Something else
+
+##
 
 
 ### TODO
