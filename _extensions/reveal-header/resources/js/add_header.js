@@ -7,7 +7,7 @@
  */
 
 function header() {
-
+  Reveal.configure({ embedded: true });
   // add the header structure as the firstChild of div.reveal-header
   function add_header() {
     let header = document.querySelector("div.reveal-header");
@@ -16,6 +16,22 @@ function header() {
     body.insertBefore(header, reveal);
     let footer = document.querySelector("div.reveal-footer");
     body.appendChild(footer)
+
+    let chalkboard = document.querySelectorAll("div.chalkboard-button")
+
+    chalkboard.forEach((button) => {
+      footer.prepend(button);
+    });
+
+
+    let menu = document.querySelector("div.slide-menu-button");
+    if (menu != null) {
+    footer.prepend(menu)
+    }
+
+   
+
+
 
     logo_img = document.querySelector('.header-logo img');
     if (logo_img.getAttribute('src') == null) {
