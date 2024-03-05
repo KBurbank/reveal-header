@@ -12,7 +12,10 @@ function header() {
   function add_header() {
     let header = document.querySelector("div.reveal-header");
     let reveal = document.querySelector(".reveal");
-    reveal.insertBefore(header, reveal.firstChild);
+    let body = document.querySelector(".quarto-light");
+    body.insertBefore(header, reveal);
+    let footer = document.querySelector("div.reveal-footer");
+    body.appendChild(footer)
 
     logo_img = document.querySelector('.header-logo img');
     if (logo_img.getAttribute('src') == null) {
@@ -33,12 +36,7 @@ function header() {
   };
 
 
-  function fixHeight() {
-
-    var clientHeight = document.querySelector('div.reveal-header').clientHeight;
-    let dyn_slides = document.querySelector('div.slides');
-    dyn_slides.style.marginTop = clientHeight + 'px';
-  }
+  
 
 
   // add the class inverse-header for slide with has-dark-background class
@@ -64,13 +62,7 @@ function header() {
       cheader.innerHTML = ctext;
     };
 
-    // kludge to wait until the page has recalculated the height in order to set it right
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        fixHeight();
-      });
-    });
-
+  
 
   };
 

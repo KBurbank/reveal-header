@@ -16,11 +16,45 @@ vertical-align: center;
 text-align: right;
 }
 
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  text-transform: none !important;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+ min-height: 100vh;
+}
+.reveal {
+/*   !important;*/
+
+position: static;
+flex: auto;
+}
 
 .reveal-header {
   background-color: rgb(176, 189, 213);
   margin: 0px !important;
-position: flex;
+position: static;
 width: 100%;
 }
 
+.reveal-footer {
+  background-color: rgb(176, 189, 213);
+  margin: 0px !important;
+position: static;
+width: 100%;
+color: white!important;
+vertical-align: center;
+font-size: max(12px, 3.45vw);
+}
+
+.reveal-footer p {
+  margin-left: 8px;
+}
+
+.reveal .slide-menu-button {
+  position: absolute !important;
+}

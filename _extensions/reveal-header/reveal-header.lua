@@ -123,7 +123,7 @@ if quarto.doc.is_format('revealjs') then
    -- if meta['sub_title'] then
     local header_subsection = pandoc.Div(pandoc.Para(" "), {class = "sub-title", id="reveal-subheader"})
     -- else
-      
+     local footer_text = pandoc.Div(pandoc.Para(" "), {class = "footer-section"}) 
    --b end
     local header_section = pandoc.Div(pandoc.Para(" "), {class = "sc-title"})
     local header_sbsection = pandoc.Div(pandoc.Para(" "), {class = "sb-title"})
@@ -148,7 +148,9 @@ if quarto.doc.is_format('revealjs') then
         header_subsection
       }, 
       {class = 'reveal-header'})
+    local div2 = pandoc.Div({footer_text},{class='reveal-footer'}) 
     table.insert(blocks, div)
+    table.insert(blocks,div2)
     return doc
   end
 end
