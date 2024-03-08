@@ -23,6 +23,11 @@ function header() {
       footer.prepend(button);
     });
 
+    let palettes = document.querySelectorAll("div.palette")
+    palettes.forEach((palette) => {
+      footer.append(palette);
+    })
+ 
 
     let menu = document.querySelector("div.slide-menu-button");
     if (menu != null) {
@@ -160,13 +165,13 @@ function header() {
 
     //change_header(dynamic_header, header_text, header_inner_html);
 
-    Reveal.on('slidechanged', event => {
-      let dyn_header = event.currentSlide.querySelector('div.header p');
+    //Reveal.on('slidechanged', event => {
+     // let dyn_header = event.currentSlide.querySelector('div.header p');
       //  change_header(dyn_header, header_text, header_inner_html);
 
       // set the margin-top property of the first div with class "styles" to equal clientHeight
 
-    });
+   // });
 
 
     /************** header text in title slide if title or ***********************/

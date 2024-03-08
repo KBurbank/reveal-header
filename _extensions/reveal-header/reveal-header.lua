@@ -74,7 +74,7 @@ local function grid_subtitle()
   quarto.doc.add_html_dependency({
   name = "grid-subtitle",
   version = "1.0.0",
-  stylesheets = {"resources/css/grid_subtitle.css","resources/css/subtitle.css"}
+  stylesheets = {"resources/css/grid_subtitle.css","resources/css/subtitle.css","resources/css/footer.css"}
 })
 end
 
